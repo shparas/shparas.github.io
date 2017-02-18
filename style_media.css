@@ -1,0 +1,87 @@
+@media screen and (max-width: 1000px) {
+	.contact-container{
+
+	}
+	.contact-thumbnails{
+		float:left;
+		width: 100%;
+	}
+	.contact-icon img{
+		width:50px;
+		height:auto;
+	}
+	.contact-icon{
+		display:table-cell;
+		vertical-align: middle;
+	}
+	.contact-text{
+		font-size:20px;
+		padding:10px;
+		display:table-cell;
+		vertical-align: middle;
+	}
+}
+@media screen and (max-width: 1000px) {
+	/*Columns x out of y*/
+	.col-1o1-m{
+		width:100%;
+	}
+	.col-1o2-m{
+		width:50%;
+	}
+	.col-1o3-m{
+		width:33%;
+	}
+	.col-1o4-m{
+		width:25%;
+	}
+	.col-1o5-m{
+		width:20%;
+	}
+	.col-2o3-m{
+		width:66%;
+	}
+	.col-2o5-m{
+		width:40%;
+	}
+	.col-3o4-m{
+		width:75%;
+	}
+	.col-3o5-m{
+		width:60%;
+	}
+	.col-4o5-m{
+		width:80%;
+	}
+
+
+	*[class^="col-"]:not(:first-child) .col-container{
+		margin-left:10px;
+	}
+	.col-1o1-sm:not(:first-child) .col-container{
+		margin-left:0px !important;
+	}
+
+
+
+
+	.contact-container{
+
+	}
+	.contact-thumbnails{
+		float:left;
+		width: 100%;
+	}
+	.contact-icon img{
+		width:50px;
+		height:auto;
+	}
+	.contact-icosn{
+		display:table-cell;
+		vertical-align: middle;
+	}
+	.contact-text{
+		font-size:20px;
+		padding:10px;
+	}
+}
