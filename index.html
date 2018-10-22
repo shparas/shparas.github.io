@@ -1,64 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>eParas - Sorry! Under Construction</title>
-	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, width=device-width, maximum-scale=1.0, minimal-ui">
-	<meta charset="UTF-8">
-	<meta name="keyword" content="eParas, Official Website of Paras">
-	<meta name="description" content="Official website of Paras Sharma.">
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" media="screen and (max-width: 500px)" href="style_max300.css">
-	<link rel="stylesheet" href="margin_padding.css">
+<!-- Stuffs for bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<!-- Stuffs good to have -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- initial zoom level when page is first loaded. -->
+<!-- My Stuffs -->
+	<link rel="stylesheet" href="/styles/main.css">
+	<script src="/scripts/main.js"></script>
+	<title>Home</title>
 </head>
-
 <body>
-<nav class="nav-header">
-	<div class="responsive-menu">
-		<div class="responsive-menu-head">
-			<img class="menu-collapse" src="images/menu.png">
+	<div class="container mt-5">
+		<div class="row mt-5">
+			<div class="col mt-5 text-center">
+				<div class="my-5">&nbsp;</div>
+				<div class="my-5 d-none d-md-block">&nbsp;</div>
+				<h1 id="info-action" class="my-5">Please hold on...</h1>
+				<div class="my-5 d-none d-md-block">&nbsp;</div>
+				<h4 id="info-description">while we check few things on our end.</h4>
+			</div>
 		</div>
-		<ul>
-			<li itemprop="url">
-				<a href="" itemprop="name">Home</a>
-			</li>
-			<li itemprop="url">
-				<a href="" itemprop="name">Projects</a>
-			</li>
-			<li itemprop="url">
-				<a href="" itemprop="name">Blog</a>
-			</li>
-			<li itemprop="url">
-				<a href="" itemprop="name">About</a>
-			</li>
-			<li itemprop="url">
-				<a href="" itemprop="name">Contact</a>
-			</li>
-		</ul>
 	</div>
-
-	<ul class="right">
-		<li><a href="https://www.linkedin.com/in/paras-sharma" target="_blank" itemprop="name" class="right table-cell"><img src="images\LinkedIn.png"></a></li>
-		<li><a href="https://twitter.com/sh_paras1" target="_blank" itemprop="name" class="right table-cell"><img src="images\twitter.png"></a></li>
-	</ul>
-
-</nav>
-<div class="nav-header-space"></div>
-
-<h1 class='maTRL10 maB5 paTRBL10 black-tp-bg-head border-radius-3px text-center head'>
-	Webpage under construction!
-</h1>
-<div class='maRBL10 paTRBL5 black-tp-bg border-radius-3px text-center' style='overflow:hidden'>
-	<img src="images\underconstruction.png" style='display:inline-block; width: 300px; height: 150px;'><br>
-	<div style='max-width: 500px; display:inline-block; block; margin:auto 0 auto 0;'>
-		<p class='overflowcontrol'>
-			Shoot! This site is still under construction and I can't provide you with the contents at this time. Please check back later. I am sorry for the trouble.
-		</p><br>
-		
-		<p class='overflowcontrol'>
-			If there is something  I can do or if you think you aren't supposed to see this, please email me at <a href='mailto:mail@eparas.com?Subject=Content%20Not%20Available'>mail@eparas.com</a> and I will see how I can fix this.
-		</p><br>
-	</div>
+<script>
+HOME_SERVER = 'http://on.eparas.com/others/availability.txt';
+RED_ADDR = "http://on.eparas.com";
+setTimeout(failed, 5000);
+try{
+	var xmlHttp = new XMLHttpRequest();
+	xmlHttp.onload = function() {
+		if(this.responseText=="YESYESYES") success();
+		else failed();
+	}
+	xmlHttp.open('GET', HOME_SERVER, true);
+	xmlHttp.send();
+}
+catch(e){
+	failed();
+}
+function success(){
+	document.getElementById('info-action').innerHTML = "Ready?";
+	document.getElementById('info-description').innerHTML = "Lets go.";
+	window.location.replace(RED_ADDR);
+}
+function failed(){
+	document.getElementById('info-action').innerHTML = "== !(SERVER_ON)";
+	document.getElementById('info-description').innerHTML = "My computer isn't on at the moment.<br>See you next time?";
+}
+</script>
 </div>
-<hr class=break>
 </body>
 </html>

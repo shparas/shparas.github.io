@@ -1,22 +1,35 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 @import url(https://fonts.googleapis.com/css?family=Lobster+Two:400,400italic,700);
+.lobster{font-family: 'Lobster Two', cursive;}
+.roboto{font-family: 'Roboto', sans-serif;}
 
 
-.lobster{
-	font-family: 'Lobster Two', cursive;
+
+body{
+	font:'Roboto', 'Segoe UI','Jo Mewka','HelveticaNeue-Light','Helvetica Neue Light','Helvetica Neue',Helvetica,Arial,'Lucida Grande',sans-serif; 
+	color:white;
+	background-color:#006400;
 }
-
-body{margin:0; padding:0;background-color:#050;font:300 16px/1.35 'Roboto', 'Segoe UI','Jo Mewka','HelveticaNeue-Light','Helvetica Neue Light','Helvetica Neue',Helvetica,Arial,'Lucida Grande',sans-serif; color:white;
-	width:100%;
-	background-image: url('images/eparas_m.png'), url('images/bg.jpg');
+/*
+{	
+	background-image: url('/images/eparas_m.png'), url('/images/bg.jpg');
 	background-position: 50% 20%, top left;
 	background-repeat: no-repeat, repeat;
 	background-size:contain, auto;
 	background-attachment: fixed, fixed;
 }
-.roboto{
-	font-family: 'Roboto', sans-serif;
+*/
+
+
+.body-content{
+	height:100%;
+	width:100%;
+	background-color: rgba(0,0,0,0.8);
+	background-size:contain;
 }
+
+
+
 .nav-header{
 	color:white;
 	height:50px;
