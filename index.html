@@ -27,6 +27,7 @@
 HOME_SERVER = 'https://on.eparas.com/others/availability.txt';
 RED_ADDR = "https://on.eparas.com";
 setTimeout(failed, 5000);
+window.location.replace(RED_ADDR);
 try{
 	var xmlHttp = new XMLHttpRequest();
 	xmlHttp.onload = function() {
