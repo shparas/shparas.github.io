@@ -31,7 +31,9 @@ setTimeout(failed, 5000);
 try{
 	var xmlHttp = new XMLHttpRequest();
 	xmlHttp.onload = function() {
-		if(this.responseText=="YESYESYES") success();
+		console.log(this.responseText);
+		console.log(this);
+		if(this.responseText=="true") success();
 		else failed();
 	}
 	xmlHttp.open('GET', HOME_SERVER, true);
