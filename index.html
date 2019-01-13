@@ -33,7 +33,7 @@ try{
 	xmlHttp.onload = function() {
 		console.log(this.responseText);
 		console.log(this);
-		if(this.responseText=="true") success();
+		if(this.responseText=="strue") success();
 		else failed();
 	}
 	xmlHttp.open('GET', HOME_SERVER, true);
