@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Stuffs for bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<!-- Stuffs good to have -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- initial zoom level when page is first loaded. -->
+<!-- My Stuffs -->
+	<link rel="stylesheet" href="/styles/main.css">
+	<script src="/scripts/main.js"></script>
+	<title>Updater</title>
+</head>
+<body>
+	<div class="container mt-5">
+		<div class="row mt-5">
+			<div class="col mt-5 text-center">
+				<div class="my-5">&nbsp;</div>
+				<div class="my-5 d-none d-md-block">&nbsp;</div>
+				<h1 id="info-action" class="my-5">Updating </h1>
+				<div class="my-5 d-none d-md-block">&nbsp;</div>
+				<h4 id="info-description">Hold up...</h4>
+			</div>
+		</div>
+	</div>
+<script>
+var URL = 'https://dynamicdns.park-your-domain.com/update?host=on&domain=eparas.com&password=348bae025f96485d94ec573c4cd638ff';
+var TIME = 600000
+
+update()
+var auto = setInterval(update, TIME);
+
+function update(){
+	try{
+		var xmlHttp = new XMLHttpRequest();
+		xmlHttp.onload = function() {
+			success(this.responseText);
+		}
+		xmlHttp.open('GET', URL, true);
+		xmlHttp.setRequestHeader('Referer', 'https://dynamicdns.park-your-domain.com')
+		xmlHttp.send();
+	}
+	catch(e){
+		document.getElementById('info-action').innerHTML = e;
+		failed();
+	}
+}
+function success(text){
+	document.getElementById('info-description').innerHTML = text;
+}
+function failed(){
+	document.getElementById('info-description').innerHTML = "Something's not right!";
+}
+</script>
+</div>
+</body>
+</html>

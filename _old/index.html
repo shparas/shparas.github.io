@@ -7,7 +7,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- initial zoom level when page is first loaded. -->
 <!-- My Stuffs -->
-	<link rel="stylesheet" href="/styles/main_old.css">
+	<link rel="stylesheet" href="/styles/main.css">
 	<script src="/scripts/main.js"></script>
 	<title>Home</title>
 </head>
@@ -26,8 +26,8 @@
 <script>
 HOME_SERVER = 'https://on.eparas.com/availability.txt';
 RED_ADDR = "https://on.eparas.com";
-RED_ADDR_FAILED = "/home.html";
 setTimeout(failed, 5000);
+//window.location.replace(RED_ADDR);
 try{
 	var xmlHttp = new XMLHttpRequest();
 	xmlHttp.onload = function() {
@@ -47,8 +47,7 @@ function success(){
 }
 function failed(){
 	document.getElementById('info-action').innerHTML = "SERVER != ON";
-	document.getElementById('info-description').innerHTML = "My computer isn't on at the moment.<br>In about 5 seconds, the temporary version will be loaded.<br>Please note that all contents aren't available and many features will not work well.<br>Sorry for the inconvenience.";
-	setTimeout(function(){window.location.replace(RED_ADDR_FAILED);}, 5000);
+	document.getElementById('info-description').innerHTML = "My computer isn't on at the moment.<br>See you next time?";
 }
 </script>
 </div>
