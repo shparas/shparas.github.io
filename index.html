@@ -19,7 +19,7 @@
 				<div class="my-5 d-none d-md-block">&nbsp;</div>
 				<h1 id="info-action" class="my-5">Please hold on...</h1>
 				<div class="my-5 d-none d-md-block">&nbsp;</div>
-				<h4 id="info-description">while we check few things on our end.</h4>
+				<h4 id="info-description">while I check few things on my end.</h4>
 			</div>
 		</div>
 	</div>
@@ -33,7 +33,7 @@ try{
 	xmlHttp.onload = function() {
 		console.log(this.responseText);
 		console.log(this);
-		if(this.responseText=="strue") success();
+		if(this.responseText=="true") success();
 		else failed();
 	}
 	xmlHttp.open('GET', HOME_SERVER, true);
